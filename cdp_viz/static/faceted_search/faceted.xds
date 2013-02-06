@@ -1,0 +1,186 @@
+{
+    "name": "faceted.xds",
+    "settings": {
+        "urlPrefix": "http://localhost/",
+        "directAPI": "",
+        "spacesToIndent": 4,
+        "codeGenFormat": "Class",
+        "exportPath": ".",
+        "extPath": "http://extjs.cachefly.net/ext-4.0.2a/",
+        "lineEnding": "LF",
+        "instantiateStore": true,
+        "exportXDSFiles": true,
+        "genTimestamps": true,
+        "appName": "MyApp"
+    },
+    "xdsVersion": "1.2.2",
+    "components": [
+        {
+            "id": "ExtBox1-ext-gen2829",
+            "type": "window",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "id": "cdp_faceted_win",
+                "width": null,
+                "layout": "border",
+                "closeAction": "hide",
+                "title": "CDP Faceted Browsing",
+                "modal": true,
+                "designer|userClassName": "MyWindow"
+            },
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen1780",
+                    "type": "tabpanel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "ResultsTabPanel",
+                        "activeTab": 0,
+                        "designer|userClassName": "MyTabPanel",
+                        "layout|region": "center",
+                        "layout|split": true
+                    },
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen1795",
+                            "type": "panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "TextResultsTab",
+                                "autoScroll": true,
+                                "layout": "fit",
+                                "title": "Text Results",
+                                "designer|userClassName": "MyPanel"
+                            },
+                            "cn": [
+                                {
+                                    "id": "ExtBox1-ext-gen1974",
+                                    "type": "container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "html": "<div class=\"right\">\n  <div id=\"result\">\n    <div id=\"docs\"></div>\n  </div>\n</div>",
+                                        "id": "TextResultsContainer",
+                                        "margin": null,
+                                        "layout": "fit",
+                                        "designer|userClassName": "MyContainer"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen1804",
+                            "type": "panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "TimelineResultsTab",
+                                "autoScroll": true,
+                                "layout": "fit",
+                                "title": "Timeline Results",
+                                "designer|userClassName": "MyPanel1"
+                            },
+                            "cn": [
+                                {
+                                    "id": "ExtBox1-ext-gen2318",
+                                    "type": "container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "autoRender": true,
+                                        "autoShow": true,
+                                        "id": "TimelineResultsContainer",
+                                        "margin": null,
+                                        "tpl": "<style type=\"text/css\">\niframe.TimelineResultsFrame {\nposition: absolute;\nwidth: 100%;\nheight: 100%;\nbackground-color: #FFFFFF;\nborder-width: 0;\noverfow:visible;\n}\n</style>\n<iframe class=\"TimelineResultsFrame\" \nsrc=\"timeline?sessionId={sessionId}&timeline-use-local-resources\"></iframe>",
+                                        "layout": "fit",
+                                        "designer|userClassName": "MyContainer"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen2671",
+                            "type": "toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 20,
+                                "html": "<div id=\"faceted-navigation\">\n  <ul id=\"faceted-pager\"></ul>\n  <div id=\"faceted-pager-header\"></div>\n</div>",
+                                "designer|userClassName": "MyToolbar",
+                                "dock": "top"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen4364",
+                    "type": "panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "SearchPanel",
+                        "margin": null,
+                        "width": 400,
+                        "autoScroll": true,
+                        "layout": "fit",
+                        "collapsible": true,
+                        "title": "Search Panel",
+                        "designer|userClassName": "MyPanel2",
+                        "layout|margins": null,
+                        "layout|region": "west",
+                        "layout|split": true,
+                        "dock": null
+                    },
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen2134",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "    <div class=\"left\">\n      <h2>Current Selection</h2>\n      <ul id=\"selection\"></ul>\n\n      <h2>Search</h2>\n      <span id=\"search_help\">(press ESC to close suggestions)</span>\n      <ul id=\"search\">\n        <input type=\"text\" id=\"query\" name=\"query\"/>\n      </ul>\n\n      <h2>Product Types</h2>\n\n      <div class=\"tagcloud\" id=\"types\"></div>\n      \n      <h2>Instruments</h2>\n\n      <div class=\"tagcloud\" id=\"instruments\"></div>\n      \n      <h2>Datasets</h2>\n\n      <div class=\"tagcloud\" id=\"datasets\"></div>\n      \n      <h2>Versions</h2>\n\n      <div class=\"tagcloud\" id=\"versions\"></div>\n      \n      <h2>Agents</h2>\n\n      <div class=\"tagcloud\" id=\"agents\"></div>\n      \n      <h2>Sessions</h2>\n\n      <div class=\"tagcloud\" id=\"sessions\"></div>\n      \n\n      <h2>By Date</h2>\n\n      <div id=\"calendar\"></div>\n\n<!--\n      <h2>Top controlledBy</h2>\n\n      <div class=\"tagcloud\" id=\"controlledBy\"></div>\n      \n      <h2>Top Organisations</h2>\n      <div class=\"tagcloud\" id=\"organisations\"></div>\n\n      <h2>Top Exchanges</h2>\n      <div class=\"tagcloud\" id=\"exchanges\"></div>\n\n      <h2>By Country</h2>\n\n      <div id=\"countries\"></div>\n      <div id=\"preview\"></div>\n\n      <h2>By Date</h2>\n      <div id=\"calendar\"></div>\n-->\n\n      <div class=\"clear\"></div>\n    </div>\n    <div class=\"clear\"></div>\n\n  </div>",
+                                "id": "SearchContainer",
+                                "margin": null,
+                                "layout": "fit",
+                                "designer|userClassName": "MyContainer"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "stores": [],
+    "framework": "ext40"
+}
